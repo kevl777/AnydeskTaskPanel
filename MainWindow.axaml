@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="clr-namespace:Avalonia;assembly=Avalonia.Base"
+        x:Class="TestAvalonia.MainWindow"
+        Width="120"
+        Height="18"
+        Background="Transparent"
+        TransparencyLevelHint="AcrylicBlur"
+        CanResize="False"
+        WindowStartupLocation="Manual"
+        Topmost="True"
+        SystemDecorations="None">
+    <Border Name="border"
+            Background="Transparent"
+            BorderBrush="#60FFFFFF"
+            BorderThickness="1.2"
+            CornerRadius="6"
+            Padding="0">
+        <Border.Styles>
+            <Style Selector="Border:focus, Border:pointerover">
+                <Setter Property="BorderBrush" Value="#B0FFFFFF"/>
+            </Style>
+        </Border.Styles>
+        <TextBox Name="InputBox"
+                 Watermark="ID..."
+                 Background="Transparent"
+                 BorderThickness="0"
+                 FontSize="11"
+                 Foreground="#E0E0E0"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center"
+                 Padding="3,0,3,0"
+                 Margin="0"
+                 CaretBrush="#E0E0E0"
+                 TextAlignment="Center"
+                 VerticalContentAlignment="Center">
+            <TextBox.Styles>
+                <Style Selector="TextBox:empty > ContentPresenter">
+                    <Setter Property="Foreground" Value="#A0A0A0"/>
+                    <Setter Property="Margin" Value="2,0,0,0"/>
+                </Style>
+                <Style Selector="TextBox" x:SetterTargetType="TextBox">
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="CaretBrush" Value="#FFFFFF"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+                <Style Selector="TextBox:focus" x:SetterTargetType="TextBox">
+                    <Setter Property="Background" Value="#CC000000"/>
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="CaretBrush" Value="#FFFFFF"/>
+                </Style>
+                <Style Selector="TextBox:pointerover" x:SetterTargetType="TextBox">
+                    <Setter Property="Background" Value="#CC000000"/>
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="CaretBrush" Value="#FFFFFF"/>
+                </Style>
+            </TextBox.Styles>
+        </TextBox>
+    </Border>
+</Window>
